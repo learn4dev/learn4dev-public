@@ -1,0 +1,10 @@
+{
+    "id": "public",
+    "name": "Public website for learn4dev",
+    "description": "Humhub module containing static pages for public learn4dev website",
+    "keywords": ["public"],
+    "version": "1.0",
+    "humhub": {
+        "minVersion": "1.2.2"
+    }
+}
