@@ -60,7 +60,7 @@ class AboutController extends Controller
      */
     public function actionFocalPoints()
     {
-        return $this->render('@humhub/modules/learn4dev/views/learn/focal-points', [
+        return $this->render('@humhub/modules/learn4dev/views/about/focal-points', [
         ]);
     }
 
