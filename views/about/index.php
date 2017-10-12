@@ -5,14 +5,8 @@ use yii\helpers\Url;
 
 echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 $members = $this->theme->getBaseUrl() . '/img/members.jpg';
-$path = $this->theme->getBaseUrl() . '/img/about/';
 
-$relatedPages = $model->content['relatedPages'];
-foreach ($relatedPages as &$data) {
-    if (!isset($data['image'])) {
-        $data['image'] = $path . $data['id'] . '.png';
-    }
-}
+
 ?>
 <div id="static">
     <div class="container">
@@ -74,7 +68,7 @@ foreach ($relatedPages as &$data) {
                 </p>
 
             </div>
-            <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['data' => $relatedPages, 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
+            <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['displayLabels'=>false,'data' => $model->content['relatedPages'], 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
 
 
 

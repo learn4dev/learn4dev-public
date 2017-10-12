@@ -18,6 +18,7 @@ class ThumbnailWidget extends \yii\base\Widget
     public $sm = 3;
     public $md = 3;
     public $lg = 4;
+    public $displayLabels = true;
     private $_order = ['xs', 'sm', 'md', 'lg'];
 
     public function run()
@@ -94,11 +95,22 @@ class ThumbnailWidget extends \yii\base\Widget
 
     private function _outputThumbnail($data, $columnClass)
     {
+
+
+        if (substr($data['image'], 0, strlen('@theme')) == '@theme') {
+            $data['image'] = str_replace('@theme', $this->view->theme->getBaseUrl(), $data['image']);
+        }
         ?>
         <div class="<?= $columnClass ?>">
             <a href="<?= $data['url'] ?>" class="thumbnail">
                 <img src="<?= $data['image'] ?>" alt="<?= $data['id'] . ' Image' ?>">
-                <h4><?= $data['label'] ?></h4>
+                <?php
+                if ($this->displayLabels) {
+                    ?>
+                    <h4><?= $data['label'] ?></h4>
+                    <?php
+                }
+                ?>
                 <p><?= $data['description'] ?></p>
             </a>
 

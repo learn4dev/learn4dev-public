@@ -8,7 +8,6 @@
 
 namespace humhub\modules\learn4dev\controllers;
 
-
 use humhub\components\Controller;
 use humhub\modules\learn4dev\models\About;
 
@@ -28,9 +27,9 @@ class AboutController extends Controller
      */
     public function actionIndex()
     {
-        $model=new About();
+        $model = new About();
         return $this->render('@humhub/modules/learn4dev/views/about/index', [
-            'model'=>$model
+                    'model' => $model
         ]);
     }
 

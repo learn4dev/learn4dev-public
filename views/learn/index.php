@@ -1,12 +1,4 @@
-<?php
-$relatedPages = $model->content['relatedPages'];
-$path = $this->theme->getBaseUrl() . '/img/learn/';
-foreach ($relatedPages as &$data) {
-    if (!isset($data['image'])) {
-        $data['image'] = $path . $data['id'] . '.png';
-    }
-}
-?>
+
 <div id="static">
     <div class="container">
         <div id="layout-content">
@@ -14,7 +6,7 @@ foreach ($relatedPages as &$data) {
                 <h3>Learning Section</h3> 
             </div>
             <div class="container">
-                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['data' => $relatedPages, 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
+                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['displayLabels' => false, 'data' => $model->content['relatedPages'], 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
             </div>
         </div>
     </div>

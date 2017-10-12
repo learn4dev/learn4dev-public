@@ -3,7 +3,8 @@
 use yii\helpers\Url;
 
 return [
-
+    'id' => 'learn',
+    'container' => 'gallery',
     [
         'id' => 'learn-courses',
         'label' => 'Courses',

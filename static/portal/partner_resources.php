@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'id' => 'partner_resources',
+    'container' => 'gallery',
     [
         'id' => 'academy-for-international-relations',
         'label' => 'Academy for International Relations',

@@ -3,6 +3,8 @@
 use yii\helpers\Url;
 
 return [
+    'id' => 'about',
+    'container' => 'gallery',
     [
         'id' => 'about-core-group',
         'url' => Url::to(['/public/about/core-group']),
