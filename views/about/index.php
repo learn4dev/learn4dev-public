@@ -97,21 +97,10 @@ $relatedPages = [
                 </p>
 
             </div>
-            <div class="row">
-                <div id="related-links">
-                    <?php
-                    foreach ($relatedPages as $relatedPage) {
-                        ?>
-                        <div class="col-xs-6 col-md-3">
-                            <a href="<?= $relatedPage['url'] ?>" class="thumbnail">
-                                <img src="<?= $relatedPage['image'] ?>" alt="<?= $relatedPage['id'] . ' Image' ?>">
-                            </a>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
+            <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['data' => $relatedPages, 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
+
+
+
         </div>
     </div>
 </div>
