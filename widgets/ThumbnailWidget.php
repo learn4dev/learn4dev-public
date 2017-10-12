@@ -98,7 +98,10 @@ class ThumbnailWidget extends \yii\base\Widget
         <div class="<?= $columnClass ?>">
             <a href="<?= $data['url'] ?>" class="thumbnail">
                 <img src="<?= $data['image'] ?>" alt="<?= $data['id'] . ' Image' ?>">
+                <h4><?= $data['label'] ?></h4>
+                <p><?= $data['description'] ?></p>
             </a>
+
         </div>
         <?php
     }

@@ -8,8 +8,9 @@
 
 namespace humhub\modules\learn4dev\controllers;
 
-use yii\helpers\Url;
+
 use humhub\components\Controller;
+use humhub\modules\learn4dev\models\Portal;
 
 /**
  * HomeController redirects to the home page
@@ -27,7 +28,12 @@ class PortalController extends Controller
      */
     public function actionIndex()
     {
+        
+        $model = new Portal();
+
         return $this->render('@humhub/modules/learn4dev/views/portal/index', [
+                    
+                    'model'=>$model,
         ]);
     }
 

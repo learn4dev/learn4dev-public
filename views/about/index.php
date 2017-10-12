@@ -5,37 +5,14 @@ use yii\helpers\Url;
 
 echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 $members = $this->theme->getBaseUrl() . '/img/members.jpg';
+$path = $this->theme->getBaseUrl() . '/img/about/';
 
-$relatedPages = [
-    [
-        'id' => 'about-core-group',
-        'url' => Url::to(['/public/about/core-group']),
-        'text' => '<h4>Core group</h4>The core Group serves as a board for the network and'
-        . ' meet four times a year.',
-        'image' => $this->theme->getBaseUrl() . '/img/about-core-group.png'
-    ],
-    [
-        'id' => 'about-expert-groups',
-        'url' => Url::to(['/public/about/expert-groups']),
-        'text' => '<h4>Expert groups</h4>he essence of the network. Joint '
-        . 'initiatives covering a wide range of expertise.',
-        'image' => $this->theme->getBaseUrl() . '/img/about-expert-groups.png'
-    ],
-    [
-        'id' => 'about-focal-points',
-        'url' => Url::to(['/public/about/focal-points']),
-        'text' => '<h4>Focal points</h4>Focal Points are the link between member'
-        . ' organisations\' staff and the learn4dev network.',
-        'image' => $this->theme->getBaseUrl() . '/img/about-focal-points.png'
-    ],
-    [
-        'id' => 'about-annual-meeting',
-        'url' => Url::to(['/public/about/annual-meeting']),
-        'text' => '<h4>Annual Meeting</h4>The network meets each year for a joint learning exchange'
-        . ' and to decide on future strategies',
-        'image' => $this->theme->getBaseUrl() . '/img/about-annual-meeting.png'
-    ],
-];
+$relatedPages = $model->content['relatedPages'];
+foreach ($relatedPages as &$data) {
+    if (!isset($data['image'])) {
+        $data['image'] = $path . $data['id'] . '.png';
+    }
+}
 ?>
 <div id="static">
     <div class="container">

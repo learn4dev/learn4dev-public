@@ -8,8 +8,9 @@
 
 namespace humhub\modules\learn4dev\controllers;
 
-use yii\helpers\Url;
+
 use humhub\components\Controller;
+use humhub\modules\learn4dev\models\About;
 
 /**
  * HomeController redirects to the home page
@@ -27,7 +28,9 @@ class AboutController extends Controller
      */
     public function actionIndex()
     {
+        $model=new About();
         return $this->render('@humhub/modules/learn4dev/views/about/index', [
+            'model'=>$model
         ]);
     }
 

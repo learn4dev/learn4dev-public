@@ -8,7 +8,7 @@
 
 namespace humhub\modules\learn4dev\controllers;
 
-use yii\helpers\Url;
+use humhub\modules\learn4dev\models\Learn;
 use humhub\components\Controller;
 
 /**
@@ -27,7 +27,9 @@ class LearnController extends Controller
      */
     public function actionIndex()
     {
+        $model = new Learn();
         return $this->render('@humhub/modules/learn4dev/views/learn/index', [
+                    'model' => $model,
         ]);
     }
 
