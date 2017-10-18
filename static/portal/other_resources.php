@@ -56,8 +56,8 @@ return [
         'id' => 'disasterready',
         'label' => 'Disasterready.org',
         'url' => 'https://ed.ted.com/lessons',
-        'description' => 'Lessons worth sharing. Video educational material.'
-        . ' TED talks in animated videos. ',
+        'description' => 'Developed by Nonprofits and experts in eLearning to '
+        . 'help nonprofit and social sector professionals deliver on their missions.',
     ],
     [
         'id' => 'ted-ed',
