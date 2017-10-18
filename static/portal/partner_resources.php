@@ -6,7 +6,7 @@ return [
     [
         'id' => 'academy-for-international-relations',
         'label' => 'Academy for International Relations',
-        'url' => 'https://www.academyinternationalrelations.nl/en',
+        'url' => 'https://www.academyinternationalrelations.nl/en/Home/Homepage',
         'description' => 'A large number of continuing professional development '
         . 'courses for central government employees working in international '
         . 'relations.',
@@ -36,14 +36,14 @@ return [
     [
         'id' => 'unitar',
         'label' => 'UNITAR',
-        'url' => 'https://www.unitar.org/event/elearning',
+        'url' => 'https://www.unitar.org/event/',
         'description' => 'Training and capacity development activities to assist'
         . ' developing countries and vulnerable communities.'
     ],
     [
         'id' => 'post-2015-learning-hub',
         'label' => 'Post-2015 Learning Hub',
-        'url' => 'http://elearning.ec-undp-electoralassistance.org/',
+        'url' => 'http://post2015.unssc.org/',
         'description' => 'Training based on the sustainable development goals. '
         . 'Offered by UN staff College.'
     ],
@@ -90,7 +90,7 @@ return [
     ],
     [
         'id' => 'danida',
-        'label' => 'Dandida',
+        'label' => 'Danida',
         'url' => 'http://um.dk/en/about-us/e-learning/',
         'description' => 'E-learning courses developed by the Ministry of '
         . 'Foreign Affairs of Denmark.'

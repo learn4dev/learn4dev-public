@@ -55,9 +55,9 @@ return [
     [
         'id' => 'disasterready',
         'label' => 'Disasterready.org',
-        'url' => 'https://ed.ted.com/lessons',
-        'description' => 'Developed by Nonprofits and experts in eLearning to '
-        . 'help nonprofit and social sector professionals deliver on their missions.',
+        'url' => 'https://www.disasterready.org/',
+        'description' => 'Developed by NGOs and experts in eLearning to equip'
+        . ' humanitarians around the world.',
     ],
     [
         'id' => 'ted-ed',
