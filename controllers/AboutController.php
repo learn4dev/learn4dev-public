@@ -34,6 +34,30 @@ class AboutController extends Controller
     }
 
     /**
+     * Redirects to the terms and conditions page
+     *
+     * @return \yii\web\Response
+     */
+    public function actionTermsAndConditions()
+    {
+
+        return $this->render('@humhub/modules/learn4dev/views/about/terms-and-conditions', [
+        ]);
+    }
+
+    /**
+     * Redirects to the cookies page
+     *
+     * @return \yii\web\Response
+     */
+    public function actionCookies()
+    {
+
+        return $this->render('@humhub/modules/learn4dev/views/about/cookies', [
+        ]);
+    }
+
+    /**
      * Redirects to the learn index
      *
      * @return \yii\web\Response
