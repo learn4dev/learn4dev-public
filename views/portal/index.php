@@ -14,7 +14,7 @@ echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
             </div>
 
             <div class="container">
-                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['data' => $model->content['partnerResources'], 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
+                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['openTab' => true, 'data' => $model->content['partnerResources'], 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
             </div>
 
             <div class="container">
@@ -22,7 +22,7 @@ echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
             </div>
 
             <div class="container">
-                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['data' => $model->content['otherResources'], 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
+                <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['openTab' => true, 'data' => $model->content['otherResources'], 'sm' => 3, 'md' => 3, 'lg' => 3]); ?>
             </div>
         </div>
     </div>

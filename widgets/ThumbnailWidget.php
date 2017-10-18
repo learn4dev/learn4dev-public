@@ -14,6 +14,7 @@ class ThumbnailWidget extends \yii\base\Widget
 {
 
     public $data = [];
+    public $openTab = false;
     public $xs = 2;
     public $sm = 3;
     public $md = 3;
@@ -102,7 +103,7 @@ class ThumbnailWidget extends \yii\base\Widget
         }
         ?>
         <div class="<?= $columnClass ?>">
-            <a href="<?= $data['url'] ?>" class="thumbnail">
+            <a href="<?= $data['url'] ?>" <?= $this->openTab ? 'target="_blank"' : '' ?>class="thumbnail">
                 <img src="<?= $data['image'] ?>" alt="<?= $data['id'] . ' Image' ?>">
                 <?php
                 if ($this->displayLabels) {
