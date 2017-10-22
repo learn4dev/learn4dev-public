@@ -27,6 +27,8 @@ class ThumbnailWidget extends \yii\base\Widget
         $columnClasses = $this->_initColumns();
         $hiddenClasses = $this->_initHiddenClasses($columnClasses);
 
+        $flag = false;
+
         foreach ($columnClasses as $size => $columnClass) {
 
             $i = 0;
@@ -34,22 +36,30 @@ class ThumbnailWidget extends \yii\base\Widget
             $hidden = $hiddenClasses[$size];
             foreach ($this->data as $data) {
                 if ($i == 0) {
-                    echo '<div class="row' . $hidden . '">';
+                    echo '<div class="row' . $hidden . '">' . PHP_EOL;
                 }
                 $this->_outputThumbnail($data, $columnClass);
                 $i++;
                 $last = $this->$size;
                 if ($i == $last) {
                     $i = 0;
-                    echo '</div>';
+                    echo '</div>' . PHP_EOL;
                 }
             }
-            if ($i != $last) {
-                echo '</div>';
+            if ($i != 0) {
+        //        echo 'closing for' . $size . 'at' . $i;
+                echo '</div>' . PHP_EOL;
             }
         }
     }
 
+    /**
+     * 
+     * Constructs an array for iteration of format:
+     * [['xs'=>'col-xs-6,'sm'=>'col-sm-4','lg'=>'col-lg-3']]
+     * 
+     * @return string[]
+     */
     private function _initColumns()
     {
         $columnClasses = [];
@@ -103,16 +113,16 @@ class ThumbnailWidget extends \yii\base\Widget
         }
         ?>
         <div class="<?= $columnClass ?>">
-            <a href="<?= $data['url'] ?>" <?= $this->openTab ? 'target="_blank"' : '' ?>class="thumbnail">
+            <a href="<?= $data['url'] ?>" <?= $this->openTab ? 'target="_blank" ' : '' ?>class="thumbnail">
                 <img src="<?= $data['image'] ?>" alt="<?= $data['id'] . ' Image' ?>">
                 <?php
                 if ($this->displayLabels) {
                     ?>
-                    <h4><?= $data['label'] ?></h4>
+                    <h5><?= $data['label'] ?></h5>
                     <?php
                 }
                 ?>
-                <p><?= $data['description'] ?></p>
+                <p class="thumb-description"><?= $data['description'] ?></p>
             </a>
 
         </div>
