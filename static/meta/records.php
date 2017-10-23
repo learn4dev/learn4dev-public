@@ -56,7 +56,7 @@ return [
     ],
     'public/learn/index' =>
     [
-        'title' => 'learn',
+        'title' => 'learning section',
         'description' => 'The learn4dev network provides a selection of courses,'
         . ' training opportunities, articles, videos and other publications and a'
         . 'toolbox dedicated to trainers.',
