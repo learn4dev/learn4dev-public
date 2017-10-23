@@ -3,13 +3,8 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 ?>
-<style>
-    body{
-        background:white;
-    } 
-</style>
+<?= $this->render('@humhub/modules/learn4dev/views/common/head') ?>
 <div id="layout-content">
     <div class="container">
         <h3>Portal</h3>

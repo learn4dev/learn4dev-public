@@ -2,11 +2,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-
-echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 ?>
-
-<div class="static" id="layout-content">
+<?= $this->render('@humhub/modules/learn4dev/views/common/head') ?>
+<div id="layout-content">
     <div class="container">
         <?php ?>
         <h3>Terms and Conditions</h3>

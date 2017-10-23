@@ -1,7 +1,5 @@
-<?php
-echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
-?>
-<div class="static" id="layout-content">
+<?= $this->render('@humhub/modules/learn4dev/views/common/head') ?>
+<div id="layout-content">
 
     <div class="container">
         <?php ?>
