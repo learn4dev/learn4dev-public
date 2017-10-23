@@ -45,10 +45,11 @@ $bg = $this->theme->getBaseUrl() . '/img/crumb.jpg';
     body{
         background:white;
     } 
+
 </style>
 
-
 <div class="crumb">
-    <img src="<?= $bg; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+    <img src="<?= $bg; ?>" alt="<?= Yii::t('base', $meta['title']) ?>" id="crumb-bg"/>
+    <div class="centered"><?= $meta['title'] ?></div>
 </div> 
 
