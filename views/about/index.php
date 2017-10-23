@@ -8,9 +8,13 @@ echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 $path = $this->theme->getBaseUrl() . '/img/about/';
 $members = $this->theme->getBaseUrl() . '/img/members.jpg';
 ?>
+<style>
+    body{
+        background:white;
+    } 
+</style>
 
-
-<div class="static" id="layout-content">
+<div id="layout-content">
     <div class="container">
         <?php ?>
         <h3>about learn4dev</h3>

@@ -5,7 +5,12 @@ use yii\helpers\Url;
 
 echo $this->render('@humhub/modules/learn4dev/views/common/crumb');
 ?>
-<div class="static" id="layout-content">
+<style>
+    body{
+        background:white;
+    } 
+</style>
+<div id="layout-content">
     <div class="container">
         <h3>Portal</h3>
         <p>Take a look at the learning platforms offered by learn4dev partner organisations.</p> 

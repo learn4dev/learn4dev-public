@@ -1,4 +1,9 @@
-<div class="static" id="layout-content">
+<style>
+    body{
+        background:white;
+    } 
+</style>
+<div  id="layout-content">
     <div class="container">
         <h3>Learning Section</h3> 
     </div>
