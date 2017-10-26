@@ -16,6 +16,7 @@ class ExpertSpaces extends \yii\base\Widget
 {
 
     public $showMoreButton = false;
+    public $aside = false;
 
     /**
      * Executes the widgets
@@ -37,7 +38,8 @@ class ExpertSpaces extends \yii\base\Widget
 
         return $this->render('expertSpaces', array(
                     'newSpaces' => $query->all(),
-                    'showMoreButton' => $this->showMoreButton
+                    'showMoreButton' => $this->showMoreButton,
+                    'aside' => $this->aside,
         ));
     }
 

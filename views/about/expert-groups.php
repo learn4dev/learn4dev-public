@@ -21,7 +21,7 @@
 
         </p>
         <h3>Expert Group Spaces</h3>
-
+        <?= \humhub\modules\learn4dev\widgets\ExpertSpaces::widget(); ?>
     </div>
 
 

@@ -7,10 +7,13 @@ use yii\helpers\Html;
 
     <!-- Display panel menu widget -->
     <?php echo humhub\widgets\PanelMenu::widget(array('id' => 'new-spaces-panel')); ?>
-
-    <div class="panel-heading">
-        <?php echo Yii::t('DirectoryModule.base', '<strong>Expert Group</strong> Spaces'); ?>
-    </div>
+    <?php if (isset($aside) && $aside != false) { ?>
+        <div class="panel-heading">
+            <?php echo Yii::t('DirectoryModule.base', '<strong>Expert Group</strong> Spaces'); ?>
+        </div>
+        <?php
+    }
+    ?>
     <div class="panel-body">
         <?php foreach ($newSpaces as $space) : ?>
             <?php
@@ -29,7 +32,7 @@ use yii\helpers\Html;
                 ]
             ]);
             ?>
-<?php endforeach; ?>
+        <?php endforeach; ?>
 
 
     </div>
