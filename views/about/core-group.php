@@ -19,6 +19,9 @@
             one or more Expert Groups.
         </p>
         <h3>Current Members</h3>
+        <div class='container'>
+            <?= \humhub\modules\learn4dev\widgets\ProfileWidget::widget(); ?>
+        </div>
         <table>
             <tr>
                 <td style="width:30%"><strong>Mareike Zenker</strong></td>
