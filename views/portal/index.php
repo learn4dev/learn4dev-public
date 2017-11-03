@@ -2,12 +2,11 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-
 ?>
 <?= $this->render('@humhub/modules/learn4dev/views/common/head') ?>
 <div id="layout-content">
     <div class="container">
-        <h3>Portal</h3>
+
         <p>Take a look at the learning platforms offered by learn4dev partner organisations.</p> 
     </div>
 

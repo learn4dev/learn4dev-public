@@ -6,13 +6,12 @@ use yii\helpers\Url;
 echo $this->render('@humhub/modules/learn4dev/views/common/head');
 
 $path = $this->theme->getBaseUrl() . '/img/about/';
-$members = $this->theme->getBaseUrl() . '/img/members.jpg';
 ?>
 
 <div id="layout-content">
     <div class="container">
         <?php ?>
-        <h3>about learn4dev</h3>
+
         <p>
             <strong>Learn4dev</strong> is an international network of development organisations
             from different backgrounds. We work together to provide better 
@@ -43,15 +42,6 @@ $members = $this->theme->getBaseUrl() . '/img/members.jpg';
             <a href="<?= $path . 'learn4dev-history.pdf' ?>" download target="_blank">read our history – pdf file</a> 
         </p>
         <p>
-            Today the network counts 30 member organisations including bilateral
-            donor organisations, multilateral organisations and international 
-            training and research centres. Focal points are crucial links 
-            between member organisation and the network. 
-        </p>
-        <br>
-        <img class="img-responsive" src="<?= $members; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
-        <br>
-        <p>
             The evolution of the learn4dev network took place against the 
             background of global paradigm shifts. 
             From the Rome Declaration on Harmonisation (2003) over the
@@ -61,8 +51,20 @@ $members = $this->theme->getBaseUrl() . '/img/members.jpg';
             global development agenda. Click on the links to understand more
             on the global development framework. 
         </p>
+
     </div>
     <div class="container thumbnail-gallery">
         <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['displayLabels' => false, 'data' => $model->content['relatedPages'], 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
+    </div>
+    <div class="container">
+        <p>
+            Today the network counts 30 member organisations including bilateral
+            donor organisations, multilateral organisations and international 
+            training and research centres. Focal points are crucial links 
+            between member organisation and the network. 
+        </p>
+    </div>
+    <div class="container thumbnail-gallery" style="">
+        <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['openTab' => true, 'displayLabels' => false, 'data' => $model->content['members'], 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
     </div>
 </div>

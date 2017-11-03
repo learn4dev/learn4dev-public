@@ -19,7 +19,7 @@ if (file_exists($overwritePath)) {
 $metaImage = $_SERVER['DOCUMENT_ROOT'] . $image;
 
 
-$this->setPageTitle($meta['title']);
+$this->setPageTitle(strtoupper($meta['title']));
 $this->registerMetaTag(['name' => 'description', 'content' => $meta['description']]);
 
 //Schema.org markup for Google+

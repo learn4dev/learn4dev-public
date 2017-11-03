@@ -3,7 +3,6 @@
 
     <div class="container">
         <?php ?>
-        <h3>Cookies</h3>
         <p>
             Last Updated: 18th October 2017
         </p>

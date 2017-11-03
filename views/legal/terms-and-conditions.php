@@ -7,7 +7,6 @@ use yii\helpers\Url;
 <div id="layout-content">
     <div class="container">
         <?php ?>
-        <h3>Terms and Conditions</h3>
         <p>
             The learn4dev Network maintains this website to enhance 
             public access to information about its initiatives and for 

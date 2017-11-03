@@ -2,7 +2,7 @@
 <div id="layout-content">
     <div class="container">
         <?php ?>
-        <h3>Core Group</h3>
+
         <p>
             Learn4dev's Core Group serves as a board for the network. 
             It includes members who are organisers of the most recent 

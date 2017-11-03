@@ -15,6 +15,7 @@ class ThumbnailWidget extends \yii\base\Widget
 
     public $data = [];
     public $openTab = false;
+    public $imageSubfolder = null;
     public $xs = 2;
     public $sm = 3;
     public $md = 3;
@@ -47,7 +48,7 @@ class ThumbnailWidget extends \yii\base\Widget
                 }
             }
             if ($i != 0) {
-        //        echo 'closing for' . $size . 'at' . $i;
+                //        echo 'closing for' . $size . 'at' . $i;
                 echo '</div>' . PHP_EOL;
             }
         }
@@ -121,8 +122,12 @@ class ThumbnailWidget extends \yii\base\Widget
                     <h5><?= $data['label'] ?></h5>
                     <?php
                 }
+                if (isset($data['description'])) {
+                    ?>
+                    <p class="thumb-description"><?= $data['description'] ?></p>
+                    <?php
+                }
                 ?>
-                <p class="thumb-description"><?= $data['description'] ?></p>
             </a>
 
         </div>

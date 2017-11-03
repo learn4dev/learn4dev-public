@@ -3,7 +3,7 @@
 <div id="layout-content">
     <div class="container">
         <?php ?>
-        <h3>Expert Groups</h3>
+
         <p>
             Expert Groups are a major pillar of the learn4dev network.
             Each is founded when at least three members of the network 
