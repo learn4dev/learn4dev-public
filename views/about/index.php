@@ -31,16 +31,7 @@ $path = $this->theme->getBaseUrl() . '/img/about/';
 
             <a href="<?= $path . 'learn4dev-charter-1706.pdf' ?>" download target="_blank">read our charter – pdf file</a> 
         </p>
-        <p>
-            The essence of the learn4dev network are the Expert Groups. 
-            Each group is created around a specific topic or common area of 
-            interest and is moderated by an Expert Group leader. Within the 
-            Expert Groups, members work together on training initiatives, 
-            the co-creation of tools or the sharing of knowledge.
-        </p>   
-        <p>
-            <a href="<?= $path . 'learn4dev-history.pdf' ?>" download target="_blank">read our history – pdf file</a> 
-        </p>
+
         <p>
             The evolution of the learn4dev network took place against the 
             background of global paradigm shifts. 
@@ -57,6 +48,16 @@ $path = $this->theme->getBaseUrl() . '/img/about/';
         <?= \humhub\modules\learn4dev\widgets\ThumbnailWidget::widget(['displayLabels' => false, 'data' => $model->content['relatedPages'], 'sm' => 4, 'md' => 4, 'lg' => 4]); ?>
     </div>
     <div class="container">
+        <p>
+            The essence of the learn4dev network are the Expert Groups. 
+            Each group is created around a specific topic or common area of 
+            interest and is moderated by an Expert Group leader. Within the 
+            Expert Groups, members work together on training initiatives, 
+            the co-creation of tools or the sharing of knowledge.
+        </p>   
+        <p>
+            <a href="<?= $path . 'learn4dev-history.pdf' ?>" download target="_blank">read our history – pdf file</a> 
+        </p>
         <p>
             Today the network counts 30 member organisations including bilateral
             donor organisations, multilateral organisations and international 

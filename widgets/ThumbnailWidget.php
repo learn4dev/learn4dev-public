@@ -35,11 +35,11 @@ class ThumbnailWidget extends \yii\base\Widget
             $i = 0;
             $last = null;
             $hidden = $hiddenClasses[$size];
-            foreach ($this->data as $data) {
+            foreach ($this->data as $key => $data) {
                 if ($i == 0) {
                     echo '<div class="row' . $hidden . '">' . PHP_EOL;
                 }
-                $this->_outputThumbnail($data, $columnClass);
+                $this->_outputThumbnail($key,$data, $columnClass);
                 $i++;
                 $last = $this->$size;
                 if ($i == $last) {
@@ -105,7 +105,7 @@ class ThumbnailWidget extends \yii\base\Widget
         return $hiddenClasses;
     }
 
-    private function _outputThumbnail($data, $columnClass)
+    private function _outputThumbnail($key,$data, $columnClass)
     {
 
 
@@ -115,7 +115,7 @@ class ThumbnailWidget extends \yii\base\Widget
         ?>
         <div class="<?= $columnClass ?>">
             <a href="<?= $data['url'] ?>" <?= $this->openTab ? 'target="_blank" ' : '' ?>class="thumbnail">
-                <img src="<?= $data['image'] ?>" alt="<?= $data['id'] . ' Image' ?>">
+                <img src="<?= $data['image'] ?>" alt="<?= $key . ' Image' ?>">
                 <?php
                 if ($this->displayLabels) {
                     ?>
