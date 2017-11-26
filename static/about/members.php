@@ -75,9 +75,14 @@ return [
         'position' => 1400,
         'url' => 'https://www.irishaid.ie/#',
     ],
-    'luxdev' =>
+    'itcilo' =>
     [
         'position' => 1500,
+        'url' => 'http://www.itcilo.org/en?set_language=en',
+    ],
+    'luxdev' =>
+    [
+        'position' => 1600,
         'url' => 'https://luxdev.lu/en',
     ],
     'mfa-norway' =>
@@ -134,11 +139,6 @@ return [
     [
         'position' => 2600,
         'url' => 'http://www.iom.int/',
-    ],
-    'itcilo' =>
-    [
-        'position' => 2700,
-        'url' => 'http://www.itcilo.org/en?set_language=en',
     ],
     'europeaid' =>
     [
