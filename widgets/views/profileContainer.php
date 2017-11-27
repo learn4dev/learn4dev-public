@@ -15,7 +15,7 @@ $role = $prefix . '_role';
         <tr>
             <td style ="width: 50px; padding:10px;padding-left: 0px;"><?= Image::widget(['user' => $model, 'width' => 40, 'showTooltip' => true]) ?></td>
             <td>
-                <strong><?= $profile->firstname . ' ' . strtoupper($profile->lastname) ?></strong><br>
+                <strong><?= ucwords($profile->firstname) . ' ' . strtoupper($profile->lastname) ?></strong><br>
                 <?= Html::a($profile->organisation, $profile->organisation_hyperlink) ?>
             </td>
         </tr>
