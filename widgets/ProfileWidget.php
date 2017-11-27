@@ -20,6 +20,8 @@ class ProfileWidget extends \yii\base\Widget
     public $md = 4;
     public $lg = 4;
     public $displayLabels = true;
+    public $prefix;
+    public $label = '<h3>Current Members</h3>';
     private $_order = ['xs', 'sm', 'md', 'lg'];
 
     /**
@@ -34,33 +36,39 @@ class ProfileWidget extends \yii\base\Widget
 
         $flag = false;
 
-        foreach ($columnClasses as $size => $columnClass) {
+        if (count($models)) {
+            echo $this->label;
+            echo '<div class="container">';
+            foreach ($columnClasses as $size => $columnClass) {
 
-            $i = 0;
-            $last = null;
-            $hidden = $hiddenClasses[$size];
-            foreach ($models as $model) {
+                $i = 0;
+                $last = null;
+                $hidden = $hiddenClasses[$size];
+                foreach ($models as $model) {
 
-                if ($i == 0) {
-                    echo '<div class="row' . $hidden . '">' . PHP_EOL;
-                }
+                    if ($i == 0) {
+                        echo '<div class="row' . $hidden . '">' . PHP_EOL;
+                    }
 
-                echo $this->render('profileContainer', array(
-                    'model' => $model, 'profile' => $model->profile,
+                    echo $this->render('profileContainer', array(
+                    'model' => $model, 'profile' => $model->profile, 'prefix' => $this->prefix,
                     'columnClass' => $columnClass
-                ));
+                    ));
 
-                $i++;
-                $last = $this->$size;
-                if ($i == $last) {
-                    $i = 0;
+                    $i++;
+                    $last = $this->$size;
+                    if ($i == $last) {
+                        $i = 0;
+                        echo '</div>' . PHP_EOL;
+                    }
+                }
+                if ($i != 0) {
+                    //        echo 'closing for' . $size . 'at' . $i;
                     echo '</div>' . PHP_EOL;
                 }
             }
-            if ($i != 0) {
-                //        echo 'closing for' . $size . 'at' . $i;
-                echo '</div>' . PHP_EOL;
-            }
+
+            echo '</div>';
         }
     }
 
@@ -71,9 +79,9 @@ class ProfileWidget extends \yii\base\Widget
         /**
          * Show private spaces only if user is member
          */
-        $query->where('core_index IS NOT NULL AND core_index >= 7000 AND core_index <= 7999');
+        $query->where($this->prefix . '_role IS NOT NULL');
         $query->limit(20);
-        $query->orderBy('core_index ASC');
+        $query->orderBy($this->prefix . '_sort_order ASC');
         return $query->all();
     }
 
@@ -129,4 +137,5 @@ class ProfileWidget extends \yii\base\Widget
     }
 
 }
+
 ?>

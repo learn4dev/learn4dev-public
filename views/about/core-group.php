@@ -18,10 +18,8 @@
             including back-to-back with meetings of 
             one or more Expert Groups.
         </p>
-        <h3>Current Members</h3>
-        <div class='container'>
-            <?= \humhub\modules\learn4dev\widgets\ProfileWidget::widget(); ?>
-        </div>
+
+        <?= \humhub\modules\learn4dev\widgets\ProfileWidget::widget(['prefix' => 'core_group']); ?>
         <p style="margin-top:20px">
             To contact all current and former Core Group members,
             visit the network's LinkedIn page in the footer of this page.

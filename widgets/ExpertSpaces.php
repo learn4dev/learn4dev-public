@@ -59,7 +59,7 @@ class ExpertSpaces extends \yii\base\Widget
                 'image' => $record->getProfileImage()->getUrl()
             ];
         };
-        var_dump($data);
+
         return array_map($formatter, $data);
     }
 

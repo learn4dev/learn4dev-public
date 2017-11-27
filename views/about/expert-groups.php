@@ -22,7 +22,9 @@
         </p>
         <h3>Expert Group Spaces</h3>
         <?= \humhub\modules\learn4dev\widgets\ExpertSpaces::widget(); ?>
+
     </div>
+    <?= \humhub\modules\learn4dev\widgets\ProfileWidget::widget(['prefix' => 'expert_group', 'label' => '<h3>Expert Group Leaders</h3>']); ?>
 
 
 </div>

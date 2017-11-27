@@ -15,6 +15,6 @@
 
 
     </div>
-
+    <?= \humhub\modules\learn4dev\widgets\ProfileWidget::widget(['prefix' => 'focal_point', 'label' => '<h3>Organisation Focal Points</h3>']); ?>
 
 </div>
