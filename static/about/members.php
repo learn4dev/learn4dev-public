@@ -25,11 +25,14 @@ return [
         'position' => 400,
         'url' => 'http://www.entwicklung.at/en/',
     ],
+    /*
     'belgian-development-agency' =>
     [
         'position' => 500,
         'url' => 'https://www.btcctb.org/',
     ],
+     * 
+     */
     'belgian-development-coorperation' =>
     [
         'position' => 600,
@@ -59,6 +62,11 @@ return [
     [
         'position' => 1100,
         'url' => 'https://www.government.nl/topics/development-cooperation',
+    ],
+     'enabel' =>
+    [
+        'position' => 1150,
+        'url' => 'https://www.enabel.be/',
     ],
     'formin-finland' =>
     [
