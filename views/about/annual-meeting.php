@@ -1,17 +1,20 @@
 <?= $this->render('@humhub/modules/learn4dev/views/common/head') ?>
 <div id="layout-content">
     <div class="container">
-        <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>Annual Meeting</h3>
-                </div>
-            </div>
-        </div>
+        <?php ?>
+
+
+        <p style="margin:25px;text-align:center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lf5yxsn29ts" frameborder="0" allowfullscreen></iframe>
+        </p>
+
+        <p>
+
+            <?php $p = $this->theme->baseUrl . '/img/l4d-save-the-date.png';
+            ?>
+            <img class="img-responsive" style="width: 50% ;margin:auto" src="<?= $p ?>" alt="Save the date! Annual Meeting 2018: 28th to 30th of May at ITCILO TURIN"> 
+        </p>
     </div>
-    <div class="container">
-        <div class="row">
-            Stuff about annual meeting goes here
-        </div>
-    </div>
+
+
 </div>
