@@ -10,7 +10,7 @@
 
         <p>
 
-            <?php $p = $this->theme->baseUrl . '/img/l4d-save-the-date.png';
+            <?php $p = $this->theme->getBaseUrl(). '/img/l4d-save-the-date.png';
             ?>
             <img class="img-responsive" style="width: 50% ;margin:auto" src="<?= $p ?>" alt="Save the date! Annual Meeting 2018: 28th to 30th of May at ITCILO TURIN"> 
         </p>
