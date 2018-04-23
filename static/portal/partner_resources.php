@@ -77,13 +77,12 @@ return [
         'description' => 'The platform offers a selection of self-study options,'
         . ' enabling you to build on Project Cycle Management competencies. '
     ],
-    'capacity4dev' =>
+    'devco-academy' =>
     [
-        'label' => 'Capacity4Dev',
+        'label' => 'The DEVCO Academy',
         'position' => 1000,
         'url' => 'https://europa.eu/capacity4dev/',
-        'description' => 'European Commission’s knowledge sharing platform for '
-        . 'development cooperation: join, share, learn.'
+        'description' => 'A flagship initiative of the Commission\'s Directorate-General for International Cooperation and Development, is a public learning platform openly accessible for the entire development community.'
     ],
     'global-campus-21' =>
     [
