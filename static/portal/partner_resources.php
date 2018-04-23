@@ -81,7 +81,7 @@ return [
     [
         'label' => 'The DEVCO Academy',
         'position' => 1000,
-        'url' => 'https://europa.eu/capacity4dev/',
+        'url' => 'https://webgate.ec.europa.eu/devco-academy/',
         'description' => 'A flagship initiative of the Commission\'s Directorate-General for International Cooperation and Development, is a public learning platform openly accessible for the entire development community.'
     ],
     'global-campus-21' =>
